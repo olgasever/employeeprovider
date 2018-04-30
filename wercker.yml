@@ -7,18 +7,18 @@ push:
   steps:
     # Push to public docker repo
     - internal/docker-push:
-        username: $DOCKER_USERNAME
-        password: $DOCKER_PASSWORD
+        username: oseverya
+        password: bx1z1zpb
         tag: $DOCKER_TAG
-        repository: $DOCKER_REPOSITORY
+        repository: olgaseverya/demo
         registry: https://registry.hub.docker.com/v2
         cmd: node pipeline/source/app.js
 restart-occs:
   steps:
     # Manage Oracle Container Cloud Service container
     - peternagy/oracle-occs-container-util:
-        occs_user: $OCCS_USERNAME
-        occs_password: $OCCS_PASSWORD
+        occs_user: admin
+        occs_password: Alten2016#
         rest_server_url: $OCCS_REST_SERVER_URL
         function: $FUNCTION
         deployment_name: $DEPLOYMENT_NAME
