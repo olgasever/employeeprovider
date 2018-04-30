@@ -21,4 +21,4 @@ restart-occs:
         occs_password: Alten2016#
         rest_server_url: $OCCS_REST_SERVER_URL
         function: $FUNCTION
-        deployment_name: $DEPLOYMENT_NAME
+        deployment_name: employeeprovider
