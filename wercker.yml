@@ -7,7 +7,7 @@ push:
   steps:
     # Push to public docker repo
     - internal/docker-push:
-        username: oseverya
+        username: oseverya@gmail.com
         password: bx1z1zpb
         tag: $DOCKER_TAG
         repository: olgaseverya/demo
