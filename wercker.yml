@@ -10,7 +10,7 @@ push:
         username: olgaseverya
         password: bx1z1zpb
         tag: $DOCKER_TAG
-        repository: olgaseverya/demo
+        repository: olgaseverya/employeeprovider
         registry: https://registry.hub.docker.com/v2
         cmd: node pipeline/source/app.js
 restart-occs:
