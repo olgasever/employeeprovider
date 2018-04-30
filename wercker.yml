@@ -1,0 +1,24 @@
+box: node:6.10
+build:
+  steps:
+    # A step that executes `npm install` command
+    - npm-install
+push:
+  steps:
+    # Push to public docker repo
+    - internal/docker-push:
+        username: $DOCKER_USERNAME
+        password: $DOCKER_PASSWORD
+        tag: $DOCKER_TAG
+        repository: $DOCKER_REPOSITORY
+        registry: https://registry.hub.docker.com/v2
+        cmd: node pipeline/source/app.js
+restart-occs:
+  steps:
+    # Manage Oracle Container Cloud Service container
+    - peternagy/oracle-occs-container-util:
+        occs_user: $OCCS_USERNAME
+        occs_password: $OCCS_PASSWORD
+        rest_server_url: $OCCS_REST_SERVER_URL
+        function: $FUNCTION
+        deployment_name: $DEPLOYMENT_NAME
