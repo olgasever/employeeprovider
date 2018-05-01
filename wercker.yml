@@ -9,10 +9,9 @@ push:
     - internal/docker-push:
         username: olgaseverya
         password: bx1z1zpb
-        tag: 
         repository: olgaseverya/employeeprovider
         registry: https://registry.hub.docker.com/v2
-        cmd: node pipeline/source/app.js
+        cmd: node app.js
 restart-occs:
   steps:
     # Manage Oracle Container Cloud Service container on OCI
