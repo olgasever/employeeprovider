@@ -9,7 +9,7 @@ push:
     - internal/docker-push:
         username: olgaseverya
         password: bx1z1zpb
-        tag: employeeprovider
+        tag: 
         repository: olgaseverya/employeeprovider
         registry: https://registry.hub.docker.com/v2
         cmd: node pipeline/source/app.js
