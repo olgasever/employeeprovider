@@ -3,22 +3,22 @@ build:
   steps:
     # A step that executes `npm install` command
     - npm-install
-push:
+push-to-releases:
   steps:
-    # Push to public docker repo
+    # Push to public docker repo Container Registry ok (CR)
     - internal/docker-push:
         username: olgaseverya
         password: bx1z1zpb
-        tag: $DOCKER_TAG
-        repository: olgaseverya/employeeprovider
+        tag: 0.2
+        repository: olgaseverya/eventmonitor
         registry: https://registry.hub.docker.com/v2
-        cmd: node pipeline/source/app.js
+        cmd: node /pipeline/source/index.js
 restart-occs:
   steps:
-    # Manage Oracle Container Cloud Service container
+    # Manage Oracle Container Cloud Service container on OCI
     - peternagy/oracle-occs-container-util:
         occs_user: admin
         occs_password: Alten2016#
-        rest_server_url: $OCCS_REST_SERVER_URL
-        function: $FUNCTION
-        deployment_name: employeeprovider
+        rest_server_url: 129.157.177.182
+        function: restart
+        deployment_name: eventmonitor
