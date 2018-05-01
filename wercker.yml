@@ -3,7 +3,7 @@ build:
   steps:
     # A step that executes `npm install` command
     - npm-install
-push-to-releases:
+push:
   steps:
     # Push to public docker repo Container Registry ok (CR)
     - internal/docker-push:
