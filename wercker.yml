@@ -11,7 +11,7 @@ push:
         password: bx1z1zpb
         repository: olgaseverya/employeeprovider
         registry: https://registry.hub.docker.com/v2
-        cmd: node app.js
+        cmd: node pipeline/source/app.js
 restart-occs:
   steps:
     # Manage Oracle Container Cloud Service container on OCI
