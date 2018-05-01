@@ -10,7 +10,7 @@ push-to-releases:
         username: olgaseverya
         password: bx1z1zpb
         tag: 0.2
-        repository: olgaseverya/eventmonitor
+        repository: olgaseverya/employeeprovider
         registry: https://registry.hub.docker.com/v2
         cmd: node /pipeline/source/index.js
 restart-occs:
@@ -21,4 +21,4 @@ restart-occs:
         occs_password: Alten2016#
         rest_server_url: 129.157.177.182
         function: restart
-        deployment_name: eventmonitor
+        deployment_name: employeeprovider
