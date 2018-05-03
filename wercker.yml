@@ -5,7 +5,7 @@ build:
     - npm-install
 push:
   steps:
-    # Push to public docker repo Container Registry ok (CR)
+    # Push to public dockerrr repo Container Registry ok (CR)
     - internal/docker-push:
         username: olgaseverya
         password: bx1z1zpb
@@ -14,7 +14,7 @@ push:
         cmd: node pipeline/source/app.js
 restart-occs:
   steps:
-    # Manage Oracle Container Cloud Service container on OCI
+    # Manage Oracle Container Cloud333 Service container on OCI
     - peternagy/oracle-occs-container-util:
         occs_user: admin
         occs_password: Alten2016#
