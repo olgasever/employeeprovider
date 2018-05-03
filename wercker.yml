@@ -1,7 +1,7 @@
 box: node:6.10
 build:
   steps:
-    # A step that executes `npm install` command
+    # A step that exuuecutes `npm install` command
     - npm-install
 push:
   steps:
